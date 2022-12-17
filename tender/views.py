@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.views.generic import DetailView, ListView
+from tender.models import Tender
 
-# Create your views here.
+
+class TenderListView(ListView):
+    model = Tender
+
+
+class TenderDetailView(DetailView):
+    model = Tender
+    context_object_name = "tender"
+
+
+

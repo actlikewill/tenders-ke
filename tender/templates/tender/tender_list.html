@@ -1,0 +1,15 @@
+<h1>Tender List</h1>
+
+<div>
+    <ul>
+        {% for tender in object_list %}
+
+            <li>
+                <a href="{% url 'tender_detail' tender.id %}">
+                    {{ tender.title }}
+                </a>
+            </li>
+
+        {% endfor %}
+    </ul>
+</div>
